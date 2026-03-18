@@ -1,6 +1,6 @@
-def main():
-    print("Hello from backend!")
+"""Convenience entry point: uvicorn backend.main:app or python main.py"""
 
+import uvicorn
 
 if __name__ == "__main__":
-    main()
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
